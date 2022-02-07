@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1>Los Entrenadores hasta el momento son:</h1>
+{& block contenido &}
+
+        <ul>
+            <li>Nombre: {{entrenadores.Nombre}}</li>
+            <li>Apellido: {{entrenadores.Apellido}}</li>
+            <li>Email: {{entrenadores.Email}}</li>
+            <li>Edad: {{entrenadores.Edad}}</li>
+        <ul>
+
+            
+{% endblock %}

@@ -1,0 +1,20 @@
+<p>Estás buscando: {{query}}</p>
+
+{% if apellido_atleta %}
+
+<p>Atletas encontrados con el apellido: {{query}} {{apellido_atleta|length}}</p>
+
+<ul>
+
+    {% for apellido in apellido_atleta %}
+
+    <li>{{ atletas.apellido }}</li>
+
+    {% endfor %}
+</ul>
+
+{% else %}
+
+<p>No se encuentran resultados para su solicitud</p>
+
+{% endif %}

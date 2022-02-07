@@ -1,0 +1,27 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block titulo %}
+
+<h1>Las rutinas disponibles hasta el momento son:</h1>
+
+{% endblock %}
+
+{% block contenido %}
+
+{% for rutina in lista_rutinas %}
+
+<a href="{% url 'Detalle de Rutinas' rutina.id %}"> {{rutina}} </a>
+<a href="{% url 'Actualizar Rutinas' rutina.id %}" style="color: green"><b>Actualizar Datos</b></a>
+<a href="{% url 'Borrar Rutinas' rutina.id %}" style="color: red"><b>Borrar</b></a>
+<br>
+<br>
+
+{% endfor %}
+
+<a class="header__button" href="{% url 'Formulario de Rutinas' %}">Agregar Rutina</a>
+<br>
+<br>
+
+{% endblock %}

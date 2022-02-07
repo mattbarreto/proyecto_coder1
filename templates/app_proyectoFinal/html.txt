@@ -1,0 +1,157 @@
+<section class="steps">
+            <div class="container">
+                <div class="page-section text-center">
+                    <h2 class="page-section__title">Three simple steps</h2>
+                    <div class="page-section__title-style">
+                        <span class="first-line"></span>
+                        <span class="second-line"></span>
+                    </div>
+                    <p class="page-section__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                        eiusmod tempor incididunt ut labore et</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="text-center steps__single steps__single-first">
+                                <img src="assets/images/step1.png" alt="">
+                                <p>LOREM IPSUM DOLOR SIT AMET</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center steps__single">
+                                <img src="assets/images/step2.png" alt="">
+                                <p>LOREM IPSUM DOLOR SIT AMET</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center steps__single steps__single-last">
+                                <img src="assets/images/step3.png" alt="">
+                                <p>LOREM IPSUM DOLOR SIT AMET</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="button" href="#">TRY NOW</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- video-popup -->
+        <div class="container">
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item"
+                                    src="https://www.youtube.com/embed/wKtPBOb80II?autoplay=0" frameborder="0"
+                                    allowfullscreen="" id="video" allowscriptaccess="always"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- video-popup-end -->
+
+        <section class="sponsors sponsors--bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors1.png" alt="">
+                    </div>
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors2.png" alt="">
+                    </div>
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors3.png" alt="">
+                    </div>
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors4.png" alt="">
+                    </div>
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors5.png" alt="">
+                    </div>
+                    <div class="col-lg-2 sponsors__single">
+                        <img src="assets/images/sponsors6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team team--bg">
+            <div class="container">
+                <div class="page-section">
+                    <div class="text-center">
+                        <h2 class="page-section__title">Our team</h2>
+                        <div class="team__title-style">
+                            <span class="first-line"></span>
+                            <span class="second-line"></span>
+                        </div>
+                        <p class="page-section__subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                            do eiusmod tempor incididunt ut labore et</p>
+                    </div>
+                    <div class="row gutters-80">
+                        <div class="col-md-4">
+                            <div class="thumbnail team__single">
+                                <div class="bio text-center">
+                                    <img src="assets/images/team1.png" alt="">
+                                    <h2>Kabbo Liate, Bangladesh</h2>
+                                    <p>UX/UI Designer</p>
+                                </div>
+                                <div class="caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <div class="social-icons">
+                                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-pinterest-logo"></i></a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail team__single">
+                                <div class="bio text-center">
+                                    <img src="assets/images/team2.png" alt="">
+                                    <h2>John Doe, US</h2>
+                                    <p>UX/UI Designer</p>
+                                </div>
+                                <div class="caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <div class="social-icons">
+                                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-pinterest-logo"></i></a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="thumbnail team__single">
+                                <div class="bio text-center">
+                                    <img src="assets/images/team3.png" alt="">
+                                    <h2>Johnny Depp, Singapoor</h2>
+                                    <p>UX/UI Designer</p>
+                                </div>
+                                <div class="caption">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+                                    <div class="social-icons">
+                                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="flaticon-pinterest-logo"></i></a></li>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>

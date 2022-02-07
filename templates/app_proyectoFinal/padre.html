@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atletas</title>
+    <meta name="keywords" content="En esta pagina encontrarás el proyecto final para Coder House.">
+    <meta name="description" content="Se trata de una base de datos de atletas.">
+
+    <link rel="stylesheet" href="{% static 'app_proyectoFinal/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app_proyectoFinal/assets/fonts/flat-icon/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'app_proyectoFinal/css/style.css' %}">
+</head>
+
+<body>
+    <div id="content-wrapper">
+        <header class="header header--bg">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="{% url 'Inicio' %}">Inicio</a>
+                        <a class="navbar-brand" href="{% url 'Atletas' %}">Atletas</a>
+                        <a class="navbar-brand" href="{% url 'Entrenadores' %}">Entrenadores</a>
+                        <a class="navbar-brand" href="{% url 'Rutinas' %}">Rutinas</a> -->
+                        
+                    </div>
+                    <div class="collapse navbar-collapse" id="myNavbar">
+                        <ul class="nav navbar-nav pull-right">
+                            <li><a href="{% url 'Inicio' %}">Inicio</a></li>
+                            <li><a href="{% url 'Atletas' %}">Atletas</a></li>
+                            <li><a href="{% url 'Entrenadores' %}">Entrenadores</a></li>
+                            <li><a href="{% url 'Rutinas' %}">Rutinas</a></li>
+                            <!-- <li><a href="tel:97979">CONTACT</a></li> -->
+                        </ul>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img class="img-responsive" src="{% static 'app_proyectoFinal/assets/images/runner.png' %}" alt="">
+                    </div>
+                    <div class="col-lg-6 header__content">
+                        <h1 class="title">Bienvenido<span class="title-style"></span></h1>
+                        <p>En esta pagína encontraras el proyecto final para Coder House: una base de datos sobre atletas.</p>
+                        <a class="header__button" href="{% url 'Busqueda de Atletas' %}">Buscar Atletas</a>
+                        <a class="header__button" href="#">Buscar Rutinas</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% block contenido %}
+        
+        {% endblock %}
+
+        <footer class="footer footer--bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer__left">
+                        <a class="navbar-brand" href="#"></a>
+                        <p><span></span></p>
+                    </div>
+                    <div class="col-md-2 footer__link">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </div>
+                    <div class="col-md-2 footer__link">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </div>
+                    <div class="col-md-4 footer__social-icons">
+                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
+                        <li><a href="#"><i class="flaticon-twitter-logo-silhouette"></i></a></li>
+                        <li><a href="#"><i class="flaticon-google-plus"></i></a></li>
+                        <li><a href="#"><i class="flaticon-pinterest-logo"></i></a></li>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="assets/jquery/jquery-3.2.1.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/owl-slider/owl.carousel.min.js"></script> -->
+
+    <script>
+        $(document).ready(function () {
+
+            $('button').click(function (e) {
+                $('.collapse').collapse('hide');
+            });
+
+
+
+        });
+    </script>
+</body>
+
+</html>
