@@ -38,6 +38,7 @@
                             <li><a href="{% url 'Atletas' %}">Atletas</a></li>
                             <li><a href="{% url 'Entrenadores' %}">Entrenadores</a></li>
                             <li><a href="{% url 'Rutinas' %}">Rutinas</a></li>
+                            <li><a href="{% url 'logout' %}">Salir de la sesión</a></li>
                             <!-- <li><a href="tel:97979">CONTACT</a></li> -->
                         </ul>
                     </div>
@@ -50,7 +51,7 @@
                         <h1 class="title">Bienvenido<span class="title-style"></span></h1>
                         <p>En esta pagína encontraras el proyecto final para Coder House: una base de datos sobre atletas.</p>
                         <a class="header__button" href="{% url 'Busqueda de Atletas' %}">Buscar Atletas</a>
-                        <a class="header__button" href="#">Buscar Rutinas</a>
+                        <a class="header__button" href="{% url 'Busqueda de Rutinas' %}">Buscar Rutinas</a>
                     </div>
                 </div>
             </div>

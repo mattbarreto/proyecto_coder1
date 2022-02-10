@@ -7,7 +7,8 @@ from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 def inicio(request):
@@ -330,10 +331,11 @@ def buscar_rutina(request):
         rut = request.GET["nom"]
 
         ruti = Rutina.objects.filter(nombre__icontains=rut)
-        return render(request, "busqueda_rutinas.html", {"ruti": ruti, "query": rut})
+        return render(request, "rutinasBusqueda.html", {"ruti": ruti, "query": rut})
 
     else:
         mensaje = "Por favor, introduzca un nombre para comenzar la búsqueda"
+        
 
     return HttpResponse(mensaje)
 
@@ -362,3 +364,6 @@ class RutinasDeleteView(DeleteView):
     model = Rutina
     success_url = reverse_lazy('Rutinas')
     template_name = 'rutinas_confirm_delete.html'
+    
+
+              

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carga de Rutinas</title>
+</head>
+
+<body>
+
+    <p>Estás buscando: <strong>{{query}} </strong> </p>
+{% if ruti%}
+
+    <p>Rutinas encontradas: {{ruti|length}} rutinas </p>
+    <ul>
+
+        {% for rutinas in ruti %}
+        <li>
+            <p>Nombre: {{rutinas.nombre}}</p>
+            <p>Intensidad: {{rutinas.intensidad}}</p>
+            <p>Ejercicio 1: {{rutinas.ejercicio_1}}</p>
+            <p>Ejercicio 2: {{rutinas.ejercicio_2}}</p> 
+            <p>Ejercicio 3: {{rutinas.ejercicio_3}}</p> 
+            <p>Ejercicio 4: {{rutinas.ejercicio_4}}</p> 
+            <p>Ejercicio 5: {{rutinas.ejercicio_5}}</p> 
+            <p>Ejercicio 6: {{rutinas.ejercicio_6}}</p> 
+            <p>Ejercicio 7: {{rutinas.ejercicio_7}}</p> 
+            <p>Duración por ejercicio: {{rutinas.duracionPorEjercicio}} segundos</p> 
+            <p>Descanso entre ejercicios: {{rutinas.descansoEntreEjercicio}} segundos</p> 
+            <p>Cantidad de rodas: {{rutinas.rondas}}</p> 
+
+            <a class="header__button" href="{% url 'Inicio' %}">Volver al Inicio</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+<p>No existe la rutina solicitada</p>
+<a href="{% url 'Inicio' %}">Volver al Inicio</a>
+
+{% endif %}
+
+
+
+</body>
+
+</html>
