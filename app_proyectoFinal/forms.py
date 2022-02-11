@@ -1,4 +1,4 @@
-from django.forms import DateField, Form, IntegerField, DecimalField, CharField, EmailField
+from django.forms import DateField, Form, ImageField, IntegerField, DecimalField, CharField, EmailField
 
 class atleta_create(Form):
     nombre = CharField()
@@ -34,3 +34,6 @@ class rutina_create(Form):
     duracionPorEjercicio = IntegerField()
     descansoEntreEjercicio = IntegerField()
     rondas = IntegerField()
+    
+class AvatarFormulario(Form):
+    imagen = ImageField(required=True)

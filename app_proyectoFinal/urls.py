@@ -1,6 +1,6 @@
 from django import views
 from django.urls import path
-from app_proyectoFinal.views import inicio, atletas_ls, atleta_busqueda, atletaCreateView, atletaDetailView, atletaDeleteView, atletaListView, atletaUpdateView, entrenador_busqueda, entrenadores_ls, EntrenadoresCreateView, EntrenadoresDeleteView, EntrenadoresDetailView, EntrenadoresListView, EntrenadoresUpdateView, rutina, RutinasCreateView, RutinasDeleteView, RutinasDetailView, RutinasListView, RutinasUpdateView, rutinas_busqueda, buscar_rutina
+from app_proyectoFinal.views import agregar_avatar, inicio, atletas_ls, atleta_busqueda, atletaCreateView, atletaDetailView, atletaDeleteView, atletaListView, atletaUpdateView, entrenador_busqueda, entrenadores_ls, EntrenadoresCreateView, EntrenadoresDeleteView, EntrenadoresDetailView, EntrenadoresListView, EntrenadoresUpdateView, rutina, RutinasCreateView, RutinasDeleteView, RutinasDetailView, RutinasListView, RutinasUpdateView, rutinas_busqueda, buscar_rutina
 from django.contrib.auth.decorators import login_required
 urlpatterns = [
     path('', login_required(inicio), name='Inicio'),
@@ -33,4 +33,5 @@ urlpatterns = [
     path('rutinas/delete/<pk>', login_required(RutinasDeleteView.as_view()), name='Borrar Rutinas'),
     path('rutinas/buscar', login_required(rutinas_busqueda), name='Busqueda de Rutinas'),
     path('buscar_rutina', login_required(buscar_rutina), name='Buscar Rutinas'),
+    path('user/avatar/add', agregar_avatar, name='avatar_add'),
 ]

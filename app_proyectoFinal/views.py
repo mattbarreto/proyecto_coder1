@@ -1,8 +1,8 @@
 from django.forms import model_to_dict
 from django.http import HttpResponse
 from django.shortcuts import redirect, render
-from app_proyectoFinal.models import Atleta, Entrenador, Rutina
-from app_proyectoFinal.forms import atleta_create, entrenador_create, rutina_create
+from app_proyectoFinal.models import Atleta, Avatar, Entrenador, Rutina
+from app_proyectoFinal.forms import AvatarFormulario, atleta_create, entrenador_create, rutina_create
 from django.views.generic import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
@@ -12,8 +12,12 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 def inicio(request):
-
-    return render(request, 'inicio.html')
+    avatares = Avatar.objects.filter(user=request.user.id)
+    if avatares:
+        avatar_url = avatares.last().imagen.url
+    else:
+        avatar_url = ''
+    return render(request, 'inicio.html', {'avatar_url': avatar_url})
 
 
 def entrenador(request):
@@ -365,5 +369,19 @@ class RutinasDeleteView(DeleteView):
     success_url = reverse_lazy('Rutinas')
     template_name = 'rutinas_confirm_delete.html'
     
+    
+# Avatar
 
-              
+def agregar_avatar(request):
+    if request.method == 'POST':
+        formulario = AvatarFormulario(request.POST, request.FILES)
+        
+        if formulario.is_valid():
+            avatar = Avatar(user=request.user, imagen=formulario.cleaned_data['imagen'])
+            avatar.save()
+            return redirect('Inicio')
+    else:   
+        formulario = AvatarFormulario()
+        
+    return render(request, 'crear_avatar.html', {'form': formulario})
+    

@@ -38,6 +38,8 @@
                             <li><a href="{% url 'Atletas' %}">Atletas</a></li>
                             <li><a href="{% url 'Entrenadores' %}">Entrenadores</a></li>
                             <li><a href="{% url 'Rutinas' %}">Rutinas</a></li>
+                            <li><p class="text"> Usuario: {{user.username}}</p></li>
+                            <li><img src="{{avatar_url}}"height= "50px"/></li>
                             <li><a href="{% url 'logout' %}">Salir de la sesión</a></li>
                             <!-- <li><a href="tel:97979">CONTACT</a></li> -->
                         </ul>

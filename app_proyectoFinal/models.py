@@ -1,6 +1,9 @@
-from django.db.models import Model
+from distutils.command.upload import upload
+from tkinter import CASCADE
+from django.db.models import Model, ForeignKey, CASCADE, ImageField
 from django.utils import timezone
 from django.db.models.fields import CharField, EmailField, DateField, DecimalField, IntegerField
+from django.contrib.auth.models import User
 
 class Atleta(Model):
 
@@ -46,3 +49,8 @@ class Rutina(Model):
 
     def __str__(self):
         return f'Rutina: {self.nombre} Intensidad: {self.intensidad} Rondas: {self.rondas}'
+    
+    
+class Avatar(Model):
+    user = ForeignKey(User, on_delete=CASCADE)
+    imagen = ImageField(upload_to= 'avatares', null=True, blank= True)
