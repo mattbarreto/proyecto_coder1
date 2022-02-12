@@ -23,7 +23,7 @@ class UserEditForm (UserCreationForm):
     password2 = CharField(label='Repetir Contraseña', widget=PasswordInput)
     last_name = CharField()
     first_name = CharField()
-    is_staff = BooleanField()
+    
     
     
     class Meta:

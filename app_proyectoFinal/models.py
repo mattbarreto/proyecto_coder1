@@ -10,7 +10,7 @@ class Atleta(Model):
     nombre = CharField(max_length=40)
     apellido = CharField(max_length=40)
     disciplina = CharField(max_length=40)
-    fecha_de_nacimiento = DateField(default=timezone.now)
+    fecha_de_nacimiento = DateField(auto_now_add=False, auto_now=False, blank=True)
     ciudad_de_nacimiento = CharField(max_length=30)
     pais_de_nacimiento = CharField(max_length=30)
     altura = DecimalField(decimal_places=2, max_digits=3)
@@ -23,7 +23,7 @@ class Entrenador(Model):
 
     nombre = CharField(max_length=40)
     apellido = CharField(max_length=40)
-    fecha_de_nacimiento = DateField(default=timezone.now)
+    fecha_de_nacimiento = DateField(auto_now_add=False, auto_now=False, blank=True)
     estudios = CharField(max_length=50)
     especialidad = CharField(max_length=40)
     email = EmailField()
