@@ -1,3 +1,4 @@
+from cProfile import label
 from django.contrib.auth.forms import UserCreationForm
 from django.forms import BooleanField, EmailField, CharField, ImageField, PasswordInput, Form
 from django.contrib.auth.models import User
@@ -21,10 +22,8 @@ class UserEditForm (UserCreationForm):
     email = EmailField()
     password1 = CharField(label='Contraseña', widget=PasswordInput)
     password2 = CharField(label='Repetir Contraseña', widget=PasswordInput)
-    last_name = CharField()
-    first_name = CharField()
-    
-    
+    last_name = CharField(label='Apellido')
+    first_name = CharField(label='Nombre')
     
     class Meta:
         model = User
